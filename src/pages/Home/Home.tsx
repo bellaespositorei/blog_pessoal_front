@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../assets/profile.jpeg";
+import homeLogo from "../../assets/home.png";
 import "./Home.css";
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
           </div>
 
           <div className="flex justify-center ">
-            <img src={profile} alt="" className="w-2/3" />
+            <img src={homeLogo} alt="" className="w-2/3" />
           </div>
         </div>
       </div>
