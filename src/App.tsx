@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import { ToastContainer } from "react-toastify";
+
 import Navbar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Login from "./pages/Login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
 import Home from "./pages/Home/Home";
-import { AuthProvider } from "./contexts/AuthContext";
 import ListaTemas from "./components/temas/listaTemas/ListaTemas";
 import FormularioTema from "./components/temas/formularioTema/FormularioTema";
 import DeletarTema from "./components/temas/deletarTema/DeletarTema";
@@ -16,10 +19,13 @@ import FormularioPostagem from "./components/postagens/formularioPostagem/Formul
 import DeletarPostagem from "./components/postagens/deletarPostagem/DeletarPostagem";
 import Perfil from "./pages/perfil/Perfil";
 
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Navbar />
           <div className="min-h-[80vh]">
@@ -54,4 +60,5 @@ function App() {
     </>
   );
 }
+
 export default App;
